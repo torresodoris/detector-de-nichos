@@ -5,7 +5,7 @@ import type { Problem, ProductIdea } from '../types';
 // VITE_API_KEY is an environment variable configured in Vercel.
 const apiKey = import.meta.env.VITE_API_KEY as string;
 if (!apiKey) {
-    throw new Error("VITE_API_KEY environment variable not set");
+    throw new Error("VITE_API_KEY environment variable not set. Please check your Vercel configuration.");
 }
 
 const ai = new GoogleGenAI({ apiKey: apiKey });
