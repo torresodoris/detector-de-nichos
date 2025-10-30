@@ -1,0 +1,5 @@
+{
+  "name": "Niche Problem Detector",
+  "description": "An application that uses AI to analyze a specific niche or topic to identify common user problems and generate digital product ideas to solve them.",
+  "requestFramePermissions": []
+}
