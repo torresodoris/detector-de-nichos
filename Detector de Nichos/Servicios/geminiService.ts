@@ -1,11 +1,14 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import type { Problem, ProductIdea } from '../types';
 
-if (!process.env.API_KEY) {
-    throw new Error("API_KEY environment variable not set");
+// The API key is sensitive and should not be hardcoded.
+// VITE_API_KEY is an environment variable configured in Vercel.
+const apiKey = import.meta.env.VITE_API_KEY as string;
+if (!apiKey) {
+    throw new Error("VITE_API_KEY environment variable not set");
 }
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: apiKey });
 const model = "gemini-2.5-flash";
 
 const problemsSchema = {
