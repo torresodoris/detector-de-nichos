@@ -1,6 +1,6 @@
 // ⚙️ CONFIGURACIÓN INICIAL
 const API_KEY = "AIzaSyB902kj5fuK98xPQBXWUrh20uYFdiNfReQ"; // <-- reemplaza aquí con tu clave real
-const API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=" + API_KEY;
+const API_URL = "/api/gemini";
 
 // 🎯 FUNCIÓN PRINCIPAL
 async function analizarNicho(nicho) {
